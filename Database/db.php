@@ -9,15 +9,15 @@ require_once __DIR__ . '/../Models/Product.php';
     } catch (Exception $e) {
         echo 'Si è verificato un errore: ' . $e->getMessage();
     }
-    $kitekat = new Product ('Kitekat', 'Cibo', 34.99, 'https://shop-cdn-m.mediazs.com/bilder/fai/scorta/kitekat/in/salsa/x/g/0/400/96x_1000x1000px_0.jpg', $kitekatSpecie);
-    
+    $kitekat = new Product ('Kitekat', 'Cibo', 34.99, 'euro', 'https://shop-cdn-m.mediazs.com/bilder/fai/scorta/kitekat/in/salsa/x/g/0/400/96x_1000x1000px_0.jpg', $kitekatSpecie);
+    var_dump($kitekat);
     $lettoMemorySpecie = new Specie();
     try {
         $lettoMemorySpecie->setSpecie('Dog');
     } catch (Exception $e) {
         echo 'Si è verificato un errore: ' . $e->getMessage();
     }
-    $lettoMemory = new Product ('Letto Memory ovale', 'Cucce', 77.99, 'https://shop-cdn-m.mediazs.com/bilder/letto/memory/ovale/marrone/7/400/67053_hundebett_memory_oval_braun_fg_3288_7.jpg', $lettoMemorySpecie);
+    $lettoMemory = new Product ('Letto Memory ovale', 'Cucce', 77.99, 'euro', 'https://shop-cdn-m.mediazs.com/bilder/letto/memory/ovale/marrone/7/400/67053_hundebett_memory_oval_braun_fg_3288_7.jpg', $lettoMemorySpecie);
 
 
     $mantellaNiteSpecie = new Specie();
@@ -26,7 +26,7 @@ require_once __DIR__ . '/../Models/Product.php';
     } catch (Exception $e) {
         echo 'Si è verificato un errore: ' . $e->getMessage();
     }
-    $mantellaNite = new Product ('Mantella per cani Illume Nite Neon', 'Abbigliamento per cani', 15.99, 'https://shop-cdn-m.mediazs.com/bilder/mantella/per/cani/illume/nite/neon/1/400/_dsc1480_1.jpg', $mantellaNiteSpecie);
+    $mantellaNite = new Product ('Mantella per cani Illume Nite Neon', 'Abbigliamento per cani', 15.99, 'euro', 'https://shop-cdn-m.mediazs.com/bilder/mantella/per/cani/illume/nite/neon/1/400/_dsc1480_1.jpg', $mantellaNiteSpecie);
 
 
 

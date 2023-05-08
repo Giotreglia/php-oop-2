@@ -1,19 +1,24 @@
 <?php
 
 require_once __DIR__ . '/Specie.php';
+require_once __DIR__ . '/../Traits/Priceble.php';
 
 class Product {
+
+    use Priceble;
+
     public $name;
     public $category;
-    public $price;
     public $image;
     public $specie;
 
-    public function __construct($_name, $_category, $_price, $_image, Specie $_specie) 
+
+    public function __construct($_name, $_category, $_price, $_currency, $_image, Specie $_specie) 
     {
         $this->name = $_name;
         $this->category = $_category;
         $this->price = $_price;
+        $this->currency = $_currency;
         $this->image = $_image;
         $this->specie = $_specie->name;
     }
@@ -30,7 +35,7 @@ class Product {
                 </div>
 
                 <div>
-                    <h5 class="card-title d-inline">' . $product->price . ' €</h5><span class="text-secondary"> iva incl.</span>
+                    <h5 class="card-title d-inline">' . $product->price . ' ' . $product->currency . ' </h5><span class="text-secondary"> iva incl.</span>
                 </div>
                 <div>
                     <a href="#" class="btn btn-primary">Aggiungi al carrello</a>
